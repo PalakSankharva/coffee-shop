@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew Haven Coffee Shop</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-mug-hot"></i>
+        Brew Haven
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:15px;">
+
+        <button
+        onclick="toggleDarkMode()"
+        style="
+        padding:8px 12px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;">
+            🌙
+        </button>
+
+        <div class="menu-btn" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Fresh Coffee
+            <br>
+            Made With Love
+        </h1>
+
+        <p>
+            Start your day with premium coffee,
+            handcrafted by expert baristas.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+            href="#"
+            class="btn"
+            onclick="orderNow()">
+                Order Now
+            </a>
+
+            <a
+            href="#about"
+            class="btn-outline">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+        alt="Coffee Shop">
+
+    </div>
+
+    <div class="about-content">
+
+        <h2>About Us</h2>
+
+        <p>
+            Brew Haven serves fresh coffee,
+            delicious desserts, and unforgettable
+            experiences every day.
+        </p>
+
+        <p>
+            We carefully select premium coffee beans
+            from around the world and roast them
+            to perfection.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- MENU -->
+
+<section class="menu" id="menu">
+
+    <h2>Our Special Menu</h2>
+
+    <div class="menu-container">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+
+            <h3>Cappuccino</h3>
+
+            <p>
+                Rich espresso blended with
+                steamed milk.
+            </p>
+
+            <span>$5.99</span>
+
+            <button onclick="addToCart('Cappuccino')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+
+            <h3>Latte</h3>
+
+            <p>
+                Creamy milk coffee with
+                smooth texture.
+            </p>
+
+            <span>$6.99</span>
+
+            <button onclick="addToCart('Latte')">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c">
+
+            <h3>Mocha</h3>
+
+            <p>
+                Chocolate and espresso
+                blended together.
+            </p>
+
+            <span>$7.99</span>
+
+            <button onclick="addToCart('Mocha')">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <h2>Gallery</h2>
+
+    <div class="gallery-container">
+
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0">
+
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
+
+        <img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff">
+
+        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096">
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+    <h2>Customer Reviews</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial">
+            <p>
+                "Amazing coffee and wonderful atmosphere."
+            </p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                "Best latte I've ever tasted."
+            </p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                "Perfect place for meetings and work."
+            </p>
+            <h4>⭐⭐⭐⭐⭐</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+
+        <input
+        type="text"
+        placeholder="Your Name"
+        required>
+
+        <input
+        type="email"
+        placeholder="Your Email"
+        required>
+
+        <textarea
+        rows="5"
+        placeholder="Your Message">
+        </textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Brew Haven Coffee</h3>
+
+    <p>
+        Crafted with ❤️ and premium coffee beans.
+    </p>
+
+    <p>
+        © 2026 All Rights Reserved
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
